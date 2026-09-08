@@ -38,9 +38,37 @@ npm run dev
 
 Truy cập http://localhost:3000 (tự chuyển hướng sang `/vi`).
 
-## Triển khai production (VPS tự quản, Docker)
+## Triển khai production (PaaS — không cần quản lý server)
 
-Repo có sẵn `docker-compose.yml` orchestrate 4 service: `postgres` (PostGIS), `cms` (Strapi), `web` (Next.js), `caddy` (reverse proxy, tự xin HTTPS Let's Encrypt).
+Cách này phù hợp nếu bạn **không dùng VPS**: web lên **Vercel**, CMS + database lên **Railway** hoặc **Render**. Cả hai đều là PaaS (deploy bằng git, không phải tự cài OS/Docker/Nginx).
+
+### 1. CMS + Database (Railway hoặc Render)
+
+Cả hai đều làm theo pattern giống nhau:
+
+1. Tạo project mới, chọn "Deploy from GitHub repo", trỏ **root/source directory vào `cms/`** (repo đã có sẵn `cms/Dockerfile` để nền tảng build tự động nhận ra và dùng).
+2. Thêm 1 service **PostgreSQL** (add-on/plugin có sẵn của Railway/Render — bản miễn phí/mặc định là Postgres thường, **không có PostGIS**, nhưng không sao vì hiện tại lớp GIS đang lưu dạng JSON trong Strapi, chưa cần PostGIS thật). Railway cấp sẵn 1 biến `DATABASE_URL` — map thẳng biến đó vào service CMS là đủ, không cần tách từng field host/port/user/password.
+3. Đặt `DATABASE_CLIENT=postgres`, `DATABASE_SSL=true`, và **`DATABASE_SSL_REJECT_UNAUTHORIZED=false`** — Postgres managed của Railway/Render dùng chứng chỉ SSL tự ký, để `true` (mặc định) sẽ báo lỗi kết nối.
+4. Khai báo các biến còn lại (xem đầy đủ trong `.env.production.example`): `APP_KEYS`, `API_TOKEN_SALT`, `ADMIN_JWT_SECRET`, `JWT_SECRET`, `TRANSFER_TOKEN_SALT`, `ENCRYPTION_KEY` (sinh mới bằng `openssl rand -base64 32`, một số nền tảng như Render có nút "Generate" tự sinh), `PUBLIC_URL` (domain CMS mà nền tảng cấp, ví dụ `https://cemr-cms.up.railway.app`), `FRONTEND_URL` (domain Vercel ở bước 2), và SMTP nếu có.
+5. Deploy xong, vào `<domain-cms>/admin` tạo tài khoản admin.
+
+> **Lưu ý dung lượng ảnh/file:** Railway/Render ở gói miễn phí/rẻ thường **không có ổ đĩa lưu trữ bền vững** (ephemeral storage) — file upload qua Strapi Media Library có thể mất khi service khởi động lại. Nếu cần dùng ảnh/file thật, nên cấu hình Strapi Upload provider ra dịch vụ ngoài (Cloudinary, AWS S3, Backblaze B2...) thay vì lưu local — đây là việc cần làm thêm khi có nội dung thật, hiện chưa cấu hình.
+
+### 2. Frontend (Vercel)
+
+1. Import repo vào Vercel, đặt **root directory = `web/`**.
+2. Khai báo biến môi trường trong Vercel dashboard: `NEXT_PUBLIC_STRAPI_URL` và `STRAPI_URL` (= domain CMS ở bước 1), `NEXT_PUBLIC_SITE_URL` (= domain Vercel cấp, hoặc domain riêng nếu gắn custom domain).
+3. Vercel tự nhận diện Next.js, không cần Dockerfile (file `web/Dockerfile` chỉ dùng cho phương án VPS bên dưới, Vercel bỏ qua).
+
+Sau khi cả 2 lên, quay lại Railway/Render cập nhật `FRONTEND_URL` = domain Vercel thật (để CORS hoạt động đúng), rồi redeploy CMS.
+
+### Có thể chọn cả 2 phương án song song
+
+`.env.production.example` và các thay đổi cấu hình (`cms/config/server.ts`, `cms/config/middlewares.ts`) dùng chung cho cả 2 cách deploy — không có gì xung đột nếu sau này bạn đổi ý sang tự quản VPS.
+
+## Triển khai production — phương án thay thế (VPS tự quản, Docker)
+
+Chỉ cần nếu sau này bạn có VPS riêng và muốn tự quản hạ tầng thay vì dùng PaaS ở trên. Repo có sẵn `docker-compose.yml` orchestrate 4 service: `postgres` (PostGIS), `cms` (Strapi), `web` (Next.js), `caddy` (reverse proxy, tự xin HTTPS Let's Encrypt).
 
 **Yêu cầu trên VPS:** Docker + Docker Compose plugin đã cài, 2 domain đã trỏ DNS (A record) về IP của VPS — 1 cho web, 1 cho CMS (ví dụ `example.com` và `cms.example.com`).
 
