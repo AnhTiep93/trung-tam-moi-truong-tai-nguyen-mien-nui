@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #f7f8f6;
+  --foreground: #17231c;
+
+  /* Thương hiệu: xanh rừng (chủ đạo), xanh nước (phụ), vàng đất (nhấn/CTA) */
+  --color-primary-50: #eef6f0;
+  --color-primary-100: #d3e8d8;
+  --color-primary-400: #2f8a54;
+  --color-primary-500: #1f6d45;
+  --color-primary-600: #185938;
+  --color-primary-700: #12432a;
+
+  --color-secondary-400: #3f93c4;
+  --color-secondary-500: #1d6fa5;
+  --color-secondary-600: #17587f;
+
+  --color-accent-400: #e8974a;
+  --color-accent-500: #d9822b;
+  --color-accent-600: #b3691f;
+
+  --color-neutral-100: #f7f8f6;
+  --color-neutral-200: #eceee9;
+  --color-neutral-600: #4b564e;
+  --color-neutral-900: #17231c;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-primary-50: var(--color-primary-50);
+  --color-primary-100: var(--color-primary-100);
+  --color-primary-400: var(--color-primary-400);
+  --color-primary-500: var(--color-primary-500);
+  --color-primary-600: var(--color-primary-600);
+  --color-primary-700: var(--color-primary-700);
+
+  --color-secondary-400: var(--color-secondary-400);
+  --color-secondary-500: var(--color-secondary-500);
+  --color-secondary-600: var(--color-secondary-600);
+
+  --color-accent-400: var(--color-accent-400);
+  --color-accent-500: var(--color-accent-500);
+  --color-accent-600: var(--color-accent-600);
+
+  --color-neutral-100: var(--color-neutral-100);
+  --color-neutral-200: var(--color-neutral-200);
+  --color-neutral-600: var(--color-neutral-600);
+  --color-neutral-900: var(--color-neutral-900);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}

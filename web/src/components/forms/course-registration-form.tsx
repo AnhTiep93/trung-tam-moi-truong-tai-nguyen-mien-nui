@@ -1,0 +1,156 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
+
+export function CourseRegistrationForm({
+  courseDocumentId,
+}: {
+  courseDocumentId: string;
+}) {
+  const t = useTranslations("form");
+  const trainingT = useTranslations("training");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
+  const [errorKey, setErrorKey] = useState<string | null>(null);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("submitting");
+    setErrorKey(null);
+
+    const formData = new FormData(event.currentTarget);
+    const payload = {
+      fullName: String(formData.get("fullName") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      organization: String(formData.get("organization") ?? ""),
+      note: String(formData.get("note") ?? ""),
+      courseDocumentId,
+      website: String(formData.get("website") ?? ""),
+    };
+
+    try {
+      const res = await fetch("/api/course-registration", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        setErrorKey(
+          data.error === "rate_limited"
+            ? "errorRateLimited"
+            : data.error === "validation"
+              ? "errorValidation"
+              : "errorGeneric"
+        );
+        setStatus("error");
+        return;
+      }
+
+      setStatus("success");
+      event.currentTarget.reset();
+    } catch {
+      setErrorKey("errorGeneric");
+      setStatus("error");
+    }
+  }
+
+  if (status === "success") {
+    return (
+      <div className="rounded-lg border border-primary-200 bg-primary-50 p-6 text-primary-700">
+        <p className="font-semibold">{t("successTitle")}</p>
+        <p className="mt-1 text-sm">{t("successBody")}</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label className="text-sm font-medium text-neutral-700">
+            {t("fullName")} *
+          </label>
+          <input
+            type="text"
+            name="fullName"
+            required
+            minLength={2}
+            maxLength={200}
+            className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-neutral-700">
+            {t("email")} *
+          </label>
+          <input
+            type="email"
+            name="email"
+            required
+            className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-neutral-700">
+            {t("phone")}
+          </label>
+          <input
+            type="tel"
+            name="phone"
+            maxLength={50}
+            className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label className="text-sm font-medium text-neutral-700">
+            {t("organization")}
+          </label>
+          <input
+            type="text"
+            name="organization"
+            maxLength={200}
+            className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="text-sm font-medium text-neutral-700">
+          {trainingT("form.note")}
+        </label>
+        <textarea
+          name="note"
+          maxLength={2000}
+          rows={4}
+          className="mt-1 w-full rounded-md border border-neutral-300 px-3 py-2 text-sm focus:border-primary-500 focus:outline-none"
+        />
+      </div>
+
+      {errorKey ? (
+        <p className="text-sm font-medium text-red-600">{t(errorKey)}</p>
+      ) : null}
+
+      <button
+        type="submit"
+        disabled={status === "submitting"}
+        className="rounded-md bg-accent-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-600 disabled:opacity-60"
+      >
+        {status === "submitting" ? t("submitting") : t("submit")}
+      </button>
+    </form>
+  );
+}

@@ -1,0 +1,242 @@
+{
+  "site": {
+    "name": "Center for Mountainous Region Environment and Natural Resources",
+    "shortName": "CEMR",
+    "org": "Thai Nguyen University of Agriculture and Forestry"
+  },
+  "nav": {
+    "language": "Language",
+    "home": "Home",
+    "about": "About",
+    "team": "Team",
+    "fields": "Fields",
+    "research": "Research",
+    "services": "Services",
+    "webgis": "WebGIS",
+    "training": "Training",
+    "news": "News",
+    "library": "Library",
+    "gallery": "Photos - Videos",
+    "contact": "Contact"
+  },
+  "common": {
+    "leadResearcher": "Lead researcher",
+    "viewDetail": "View details",
+    "readMore": "Read more",
+    "noData": "No data yet, coming soon.",
+    "allLevels": "All",
+    "objective": "Objective",
+    "result": "Result",
+    "period": "Period",
+    "hostInstitution": "Host institution",
+    "partnerInstitutions": "Partner institutions",
+    "budget": "Budget",
+    "location": "Location",
+    "email": "Email",
+    "specialization": "Specialization",
+    "researchFields": "Research fields",
+    "relatedFields": "Related fields",
+    "backToList": "Back to list",
+    "skipToContent": "Skip to main content"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Thai Nguyen University of Agriculture and Forestry",
+      "title": "Center for Mountainous Region Environment and Natural Resources",
+      "slogan": "Science – Technology – Resources – Environment for sustainable mountain development",
+      "cta": "Explore our fields of work"
+    },
+    "intro": {
+      "title": "About us",
+      "body": "The Center for Mountainous Region Environment and Natural Resources conducts research, technology transfer, and consulting in land resources, forest resources, environment, GIS – remote sensing, and mountain development planning, under Thai Nguyen University of Agriculture and Forestry.",
+      "placeholderNote": "Placeholder content – to be replaced with the Center's official content."
+    },
+    "fields": {
+      "eyebrow": "8 fields",
+      "title": "Fields of activity"
+    },
+    "projects": {
+      "eyebrow": "Research",
+      "title": "Featured projects"
+    },
+    "news": {
+      "eyebrow": "Updates",
+      "title": "Latest news & events"
+    },
+    "services": {
+      "eyebrow": "Consulting & transfer",
+      "title": "Services provided"
+    },
+    "partners": {
+      "eyebrow": "Cooperation",
+      "title": "Featured partners"
+    },
+    "contact": {
+      "title": "Need consulting on resources, environment, or GIS?",
+      "body": "Send us your request and our team will get back to you as soon as possible.",
+      "cta": "Request consulting"
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "About the Center",
+    "general": {
+      "title": "General information",
+      "nameVi": "Vietnamese name",
+      "nameEn": "English name",
+      "shortName": "Short name",
+      "parentOrg": "Parent organization",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "nameViValue": "Trung tâm Môi trường Tài nguyên miền núi",
+      "nameEnValue": "Center for Mountainous Region Environment and Natural Resources",
+      "shortNameValue": "CEMR",
+      "parentOrgValue": "Thai Nguyen University of Agriculture and Forestry",
+      "addressValue": "Thai Nguyen University of Agriculture and Forestry (placeholder)",
+      "phoneValue": "(demo) +84 208 xxx xxxx",
+      "emailValue": "(demo) cemr@tuaf.edu.vn"
+    },
+    "history": {
+      "title": "History and development",
+      "note": "Placeholder content – to be updated with the Center's official records.",
+      "milestones": [
+        { "year": "20xx", "text": "The Center was established under Thai Nguyen University of Agriculture and Forestry." },
+        { "year": "20xx", "text": "First provincial- and ministry-level projects on land resources and environment." },
+        { "year": "20xx", "text": "Expanded GIS – remote sensing capacity and international cooperation." },
+        { "year": "Present", "text": "Grown into a research, consulting, and technology-transfer unit for mountain resources and environment." }
+      ]
+    },
+    "functions": {
+      "title": "Functions and duties",
+      "items": [
+        "Scientific research",
+        "Technology transfer",
+        "Training",
+        "Consulting",
+        "Resource surveys and assessment",
+        "Environmental protection",
+        "GIS and remote sensing applications",
+        "Land-use planning",
+        "Mountain socio-economic development"
+      ]
+    },
+    "vision": {
+      "title": "Vision – Mission",
+      "visionLabel": "Vision",
+      "missionLabel": "Mission",
+      "vision": "To become a leading research and technology-transfer unit for mountain resources and environment (placeholder content).",
+      "mission": "To provide reliable scientific, technological, and consulting solutions for mountain resource management and environmental protection (placeholder content)."
+    },
+    "structure": {
+      "title": "Organizational structure",
+      "levels": ["Board of Directors", "Specialized departments", "Research groups"]
+    }
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "Our team",
+    "description": "The Center's research, technology-transfer, and consulting team.",
+    "filterAll": "All",
+    "backToTeam": "Back to team",
+    "detail": {
+      "email": "Email",
+      "orcid": "ORCID",
+      "googleScholar": "Google Scholar"
+    }
+  },
+  "fields": {
+    "eyebrow": "Fields of activity",
+    "title": "8 main fields of activity",
+    "description": "The Center's research, consulting, and technology-transfer field groups.",
+    "relatedProjects": "Related projects",
+    "relatedServices": "Related services"
+  },
+  "research": {
+    "eyebrow": "Research",
+    "title": "Projects – Publications",
+    "tabProjects": "Projects",
+    "tabPublications": "Publications",
+    "filterLevel": "Filter by level",
+    "backToResearch": "Back to research"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Consulting & technology-transfer services",
+    "description": "The Center provides consulting, survey, assessment, and technology-transfer services in resources and environment.",
+    "requestTitle": "Request consulting",
+    "requestDescription": "Fill in the form below and we will get back to you as soon as possible."
+  },
+  "news": {
+    "eyebrow": "News & events",
+    "title": "News & events",
+    "filterAll": "All",
+    "backToNews": "Back to news"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contact us",
+    "description": "Need consulting on resources, environment, or GIS? Send us your request.",
+    "infoTitle": "Contact information",
+    "formTitle": "Send a message"
+  },
+  "form": {
+    "fullName": "Full name",
+    "email": "Email",
+    "phone": "Phone number",
+    "organization": "Organization",
+    "service": "Service of interest",
+    "serviceNone": "Not sure / other",
+    "message": "Message",
+    "submit": "Send request",
+    "submitting": "Sending...",
+    "successTitle": "Sent successfully!",
+    "successBody": "Thank you for contacting us. We will respond as soon as possible.",
+    "errorGeneric": "Something went wrong, please try again later.",
+    "errorRateLimited": "You just submitted a request, please try again in a few minutes.",
+    "errorValidation": "Please check the information you entered."
+  },
+  "library": {
+    "eyebrow": "Library",
+    "title": "Document library",
+    "description": "Search, view, and download documents, standards, and reports on resources and the environment.",
+    "filterAll": "All",
+    "download": "Download"
+  },
+  "gallery": {
+    "eyebrow": "Photos - Videos",
+    "title": "Photo & video library",
+    "filterAll": "All",
+    "backToGallery": "Back to gallery",
+    "video": "Video"
+  },
+  "training": {
+    "eyebrow": "Training",
+    "title": "Training courses",
+    "description": "GIS, remote sensing, LiDAR, UAV, and resource-environment management training courses.",
+    "duration": "Duration",
+    "schedule": "Schedule",
+    "location": "Location",
+    "registrationOpen": "Registration open",
+    "registrationClosed": "Registration closed",
+    "registerTitle": "Register for this course",
+    "backToTraining": "Back to training courses",
+    "form": {
+      "note": "Additional note (optional)"
+    }
+  },
+  "webgis": {
+    "eyebrow": "WebGIS",
+    "title": "Mountain resources map",
+    "description": "Interactive map that lets you toggle resource and environment data layers on and off.",
+    "layersTitle": "Map layers",
+    "legend": "Legend",
+    "demoNotice": "Placeholder data (simulated geometry) — will be replaced with the Center's official GIS data.",
+    "loading": "Loading map..."
+  },
+  "footer": {
+    "contact": "Contact",
+    "address": "Thai Nguyen University of Agriculture and Forestry",
+    "rights": "All rights reserved."
+  }
+}
