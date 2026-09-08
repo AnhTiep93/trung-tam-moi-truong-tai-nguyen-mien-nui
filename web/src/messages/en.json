@@ -225,6 +225,23 @@
       "note": "Additional note (optional)"
     }
   },
+  "search": {
+    "placeholder": "Search...",
+    "submit": "Search",
+    "title": "Search results",
+    "resultsFor": "Results for",
+    "noResults": "No matching results found.",
+    "promptEmpty": "Enter a keyword to search.",
+    "types": {
+      "person": "Team member",
+      "project": "Project",
+      "publication": "Publication",
+      "service": "Service",
+      "news": "News",
+      "document": "Document",
+      "training": "Training course"
+    }
+  },
   "webgis": {
     "eyebrow": "WebGIS",
     "title": "Mountain resources map",

@@ -225,6 +225,23 @@
       "note": "Nội dung ghi chú thêm (không bắt buộc)"
     }
   },
+  "search": {
+    "placeholder": "Tìm kiếm...",
+    "submit": "Tìm kiếm",
+    "title": "Kết quả tìm kiếm",
+    "resultsFor": "Kết quả cho",
+    "noResults": "Không tìm thấy kết quả phù hợp.",
+    "promptEmpty": "Nhập từ khoá để tìm kiếm.",
+    "types": {
+      "person": "Nhân sự",
+      "project": "Đề tài / Dự án",
+      "publication": "Công bố khoa học",
+      "service": "Dịch vụ",
+      "news": "Tin tức",
+      "document": "Tài liệu",
+      "training": "Khóa đào tạo"
+    }
+  },
   "webgis": {
     "eyebrow": "WebGIS",
     "title": "Bản đồ tài nguyên miền núi",

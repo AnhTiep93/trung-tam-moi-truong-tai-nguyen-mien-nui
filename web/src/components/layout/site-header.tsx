@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitcher } from "./language-switcher";
 import { MobileNav } from "./mobile-nav";
+import { SearchBox } from "./search-box";
 
 export function SiteHeader() {
   const site = useTranslations("site");
@@ -47,6 +48,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <SearchBox />
           <LanguageSwitcher />
           <MobileNav items={navItems} />
         </div>
