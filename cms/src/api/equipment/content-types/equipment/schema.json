@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "equipment_items",
+  "info": {
+    "singularName": "equipment",
+    "pluralName": "equipment-items",
+    "displayName": "Equipment",
+    "description": "Cơ sở vật chất: phòng/lab và thiết bị"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["phong-lab", "thiet-bi"],
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "specifications": {
+      "type": "text"
+    },
+    "function": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "relatedServices": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0,
+      "pluginOptions": { "i18n": { "localized": false } }
+    }
+  }
+}

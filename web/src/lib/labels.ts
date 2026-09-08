@@ -59,6 +59,11 @@ export const documentCategoryLabels: LabelMap = {
   "bao-cao-nghien-cuu": { vi: "Báo cáo nghiên cứu", en: "Research reports" },
 };
 
+export const equipmentTypeLabels: LabelMap = {
+  "phong-lab": { vi: "Phòng / Lab", en: "Room / Lab" },
+  "thiet-bi": { vi: "Thiết bị", en: "Equipment" },
+};
+
 export const gisLayerCategoryLabels: LabelMap = {
   "ranh-gioi-hanh-chinh": { vi: "Ranh giới hành chính", en: "Administrative boundary" },
   rung: { vi: "Rừng", en: "Forest" },

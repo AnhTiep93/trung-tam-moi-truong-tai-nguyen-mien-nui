@@ -239,3 +239,17 @@ export interface GisLayer {
   order: number;
   geojson: GeoJSON.FeatureCollection;
 }
+
+export type EquipmentType = "phong-lab" | "thiet-bi";
+
+export interface Equipment {
+  id: number;
+  documentId: string;
+  name: string;
+  slug: string | null;
+  type: EquipmentType;
+  specifications: string | null;
+  function: string | null;
+  image: StrapiMedia | null;
+  order: number;
+}

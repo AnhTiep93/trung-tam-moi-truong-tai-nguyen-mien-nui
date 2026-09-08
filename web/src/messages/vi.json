@@ -17,6 +17,8 @@
     "news": "Tin tức",
     "library": "Thư viện",
     "gallery": "Hình ảnh - Video",
+    "partners": "Hợp tác",
+    "facilities": "Cơ sở vật chất",
     "contact": "Liên hệ"
   },
   "common": {
@@ -239,8 +241,28 @@
       "service": "Dịch vụ",
       "news": "Tin tức",
       "document": "Tài liệu",
-      "training": "Khóa đào tạo"
+      "training": "Khóa đào tạo",
+      "partner": "Đối tác",
+      "equipment": "Cơ sở vật chất"
     }
+  },
+  "partners": {
+    "eyebrow": "Hợp tác",
+    "title": "Đối tác",
+    "description": "Các đối tác trong nước và quốc tế của Trung tâm.",
+    "domestic": "Đối tác trong nước",
+    "international": "Đối tác quốc tế",
+    "visitWebsite": "Truy cập website"
+  },
+  "facilities": {
+    "eyebrow": "Cơ sở vật chất",
+    "title": "Cơ sở vật chất - Thiết bị",
+    "description": "Các phòng/lab và thiết bị phục vụ nghiên cứu, đào tạo và dịch vụ của Trung tâm.",
+    "rooms": "Phòng / Lab",
+    "equipment": "Thiết bị",
+    "specifications": "Thông số",
+    "function": "Chức năng",
+    "relatedServices": "Dịch vụ liên quan"
   },
   "webgis": {
     "eyebrow": "WebGIS",

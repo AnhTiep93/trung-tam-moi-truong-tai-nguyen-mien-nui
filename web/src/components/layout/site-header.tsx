@@ -20,6 +20,8 @@ export function SiteHeader() {
     { href: "/news", label: nav("news") },
     { href: "/library", label: nav("library") },
     { href: "/gallery", label: nav("gallery") },
+    { href: "/partners", label: nav("partners") },
+    { href: "/facilities", label: nav("facilities") },
     { href: "/contact", label: nav("contact") },
   ];
 

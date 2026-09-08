@@ -138,6 +138,12 @@ export default async function HomePage() {
                 <PartnerLogo key={partner.id} partner={partner} />
               ))}
             </div>
+            <Link
+              href="/partners"
+              className="mt-6 inline-block text-sm font-medium text-primary-600 hover:underline"
+            >
+              {t("partners.title")} →
+            </Link>
           </Container>
         </section>
       ) : null}

@@ -44,6 +44,7 @@ export default {
       'api::media-album.media-album': ['find', 'findOne'],
       'api::training-course.training-course': ['find', 'findOne'],
       'api::gis-layer.gis-layer': ['find', 'findOne'],
+      'api::equipment.equipment': ['find', 'findOne'],
       // Chỉ cho phép "create" — không lộ find/findOne để không ai đọc được yêu cầu của người khác.
       'api::consultation-request.consultation-request': ['create'],
       'api::course-registration.course-registration': ['create'],

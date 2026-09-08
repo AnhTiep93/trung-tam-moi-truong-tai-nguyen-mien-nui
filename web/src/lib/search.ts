@@ -7,6 +7,8 @@ import type {
   NewsItem,
   LibraryDocument,
   TrainingCourse,
+  Partner,
+  Equipment,
 } from "./types";
 
 export interface SearchResult {
@@ -17,7 +19,9 @@ export interface SearchResult {
     | "service"
     | "news"
     | "document"
-    | "training";
+    | "training"
+    | "partner"
+    | "equipment";
   title: string;
   description: string | null;
   href: string;
@@ -50,16 +54,27 @@ export async function siteSearch(
 ): Promise<SearchResult[]> {
   if (!query || query.trim().length < 2) return [];
 
-  const [people, projects, publications, services, news, documents, courses] =
-    await Promise.all([
-      searchCollection<Person>("people", "fullName", query, locale),
-      searchCollection<Project>("projects", "title", query, locale),
-      searchCollection<Publication>("publications", "title", query, locale),
-      searchCollection<Service>("services", "name", query, locale),
-      searchCollection<NewsItem>("news-items", "title", query, locale),
-      searchCollection<LibraryDocument>("documents", "title", query, locale),
-      searchCollection<TrainingCourse>("training-courses", "title", query, locale),
-    ]);
+  const [
+    people,
+    projects,
+    publications,
+    services,
+    news,
+    documents,
+    courses,
+    partners,
+    equipment,
+  ] = await Promise.all([
+    searchCollection<Person>("people", "fullName", query, locale),
+    searchCollection<Project>("projects", "title", query, locale),
+    searchCollection<Publication>("publications", "title", query, locale),
+    searchCollection<Service>("services", "name", query, locale),
+    searchCollection<NewsItem>("news-items", "title", query, locale),
+    searchCollection<LibraryDocument>("documents", "title", query, locale),
+    searchCollection<TrainingCourse>("training-courses", "title", query, locale),
+    searchCollection<Partner>("partners", "name", query, locale),
+    searchCollection<Equipment>("equipment-items", "name", query, locale),
+  ]);
 
   const results: SearchResult[] = [
     ...people
@@ -114,6 +129,18 @@ export async function siteSearch(
         description: c.summary,
         href: `/training/${c.slug}`,
       })),
+    ...partners.map((p) => ({
+      type: "partner" as const,
+      title: p.name,
+      description: p.cooperationContent,
+      href: `/partners`,
+    })),
+    ...equipment.map((e) => ({
+      type: "equipment" as const,
+      title: e.name,
+      description: e.function,
+      href: `/facilities`,
+    })),
   ];
 
   return results;

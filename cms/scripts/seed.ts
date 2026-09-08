@@ -33,6 +33,7 @@ async function seed() {
   await seedMediaAlbums(app);
   await seedTrainingCourses(app);
   await seedGisLayers(app);
+  await seedEquipment(app);
 
   console.log('Seed hoàn tất.');
   await app.destroy();
@@ -50,7 +51,8 @@ async function seedIfEmpty(
     | 'api::document.document'
     | 'api::media-album.media-album'
     | 'api::training-course.training-course'
-    | 'api::gis-layer.gis-layer',
+    | 'api::gis-layer.gis-layer'
+    | 'api::equipment.equipment',
   items: Record<string, unknown>[],
   slugSourceField?: string
 ) {
@@ -540,6 +542,73 @@ async function seedGisLayers(app: Core.Strapi) {
             },
           ],
         },
+      },
+    ],
+    'name'
+  );
+}
+
+async function seedEquipment(app: Core.Strapi) {
+  await seedIfEmpty(
+    app,
+    'api::equipment.equipment',
+    [
+      {
+        name: 'Phòng GIS (demo)',
+        type: 'phong-lab',
+        function: 'Xây dựng, biên tập và phân tích dữ liệu bản đồ, cơ sở dữ liệu không gian.',
+        order: 1,
+      },
+      {
+        name: 'Phòng Viễn thám (demo)',
+        type: 'phong-lab',
+        function: 'Xử lý, giải đoán ảnh vệ tinh và ảnh viễn thám phục vụ giám sát tài nguyên.',
+        order: 2,
+      },
+      {
+        name: 'Phòng phân tích môi trường (demo)',
+        type: 'phong-lab',
+        function: 'Phân tích mẫu môi trường (đất, nước, không khí) phục vụ nghiên cứu và dịch vụ tư vấn.',
+        order: 3,
+      },
+      {
+        name: 'Phòng thí nghiệm đất (demo)',
+        type: 'phong-lab',
+        function: 'Phân tích tính chất lý hóa của đất phục vụ điều tra, đánh giá đất đai.',
+        order: 4,
+      },
+      {
+        name: 'Máy GNSS RTK (demo)',
+        type: 'thiet-bi',
+        specifications: 'Độ chính xác định vị cỡ cm, hỗ trợ đo đạc thực địa (thông số minh hoạ).',
+        function: 'Đo đạc, định vị chính xác cao phục vụ khảo sát địa hình.',
+        order: 5,
+      },
+      {
+        name: 'UAV/Drone khảo sát (demo)',
+        type: 'thiet-bi',
+        specifications: 'Gắn camera chụp ảnh phổ thường/đa phổ (thông số minh hoạ).',
+        function: 'Chụp ảnh trên không phục vụ khảo sát địa hình, giám sát tài nguyên rừng và đất.',
+        order: 6,
+      },
+      {
+        name: 'Máy quét LiDAR (demo)',
+        type: 'thiet-bi',
+        specifications: 'Quét điểm 3D mật độ cao (thông số minh hoạ).',
+        function: 'Thu thập dữ liệu địa hình 3D độ chính xác cao, đo đạc rừng.',
+        order: 7,
+      },
+      {
+        name: 'Máy toàn đạc điện tử (demo)',
+        type: 'thiet-bi',
+        function: 'Đo đạc góc, khoảng cách phục vụ khảo sát địa hình truyền thống.',
+        order: 8,
+      },
+      {
+        name: 'Hệ thống máy tính / Server GIS (demo)',
+        type: 'thiet-bi',
+        function: 'Lưu trữ, xử lý dữ liệu không gian và vận hành WebGIS.',
+        order: 9,
       },
     ],
     'name'

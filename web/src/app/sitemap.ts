@@ -23,6 +23,8 @@ const STATIC_PATHS = [
   "/news",
   "/library",
   "/gallery",
+  "/partners",
+  "/facilities",
   "/contact",
 ];
 

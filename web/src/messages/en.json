@@ -17,6 +17,8 @@
     "news": "News",
     "library": "Library",
     "gallery": "Photos - Videos",
+    "partners": "Cooperation",
+    "facilities": "Facilities",
     "contact": "Contact"
   },
   "common": {
@@ -239,8 +241,28 @@
       "service": "Service",
       "news": "News",
       "document": "Document",
-      "training": "Training course"
+      "training": "Training course",
+      "partner": "Partner",
+      "equipment": "Facility"
     }
+  },
+  "partners": {
+    "eyebrow": "Cooperation",
+    "title": "Partners",
+    "description": "The Center's domestic and international partners.",
+    "domestic": "Domestic partners",
+    "international": "International partners",
+    "visitWebsite": "Visit website"
+  },
+  "facilities": {
+    "eyebrow": "Facilities",
+    "title": "Facilities & Equipment",
+    "description": "Rooms/labs and equipment supporting the Center's research, training, and services.",
+    "rooms": "Rooms / Labs",
+    "equipment": "Equipment",
+    "specifications": "Specifications",
+    "function": "Function",
+    "relatedServices": "Related services"
   },
   "webgis": {
     "eyebrow": "WebGIS",

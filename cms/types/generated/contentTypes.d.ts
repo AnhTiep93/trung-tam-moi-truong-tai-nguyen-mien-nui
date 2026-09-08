@@ -592,6 +592,71 @@ export interface ApiDocumentDocument extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEquipmentEquipment extends Struct.CollectionTypeSchema {
+  collectionName: 'equipment_items';
+  info: {
+    description: 'C\u01A1 s\u1EDF v\u1EADt ch\u1EA5t: ph\u00F2ng/lab v\u00E0 thi\u1EBFt b\u1ECB';
+    displayName: 'Equipment';
+    pluralName: 'equipment-items';
+    singularName: 'equipment';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    function: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::equipment.equipment'
+    >;
+    name: Schema.Attribute.String & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<0>;
+    publishedAt: Schema.Attribute.DateTime;
+    relatedServices: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::service.service'
+    >;
+    slug: Schema.Attribute.UID<'name'> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    specifications: Schema.Attribute.Text;
+    type: Schema.Attribute.Enumeration<['phong-lab', 'thiet-bi']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGisLayerGisLayer extends Struct.CollectionTypeSchema {
   collectionName: 'gis_layers';
   info: {
@@ -1818,6 +1883,7 @@ declare module '@strapi/strapi' {
       'api::consultation-request.consultation-request': ApiConsultationRequestConsultationRequest;
       'api::course-registration.course-registration': ApiCourseRegistrationCourseRegistration;
       'api::document.document': ApiDocumentDocument;
+      'api::equipment.equipment': ApiEquipmentEquipment;
       'api::gis-layer.gis-layer': ApiGisLayerGisLayer;
       'api::media-album.media-album': ApiMediaAlbumMediaAlbum;
       'api::news-item.news-item': ApiNewsItemNewsItem;
