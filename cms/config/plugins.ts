@@ -40,6 +40,27 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
       },
     },
   },
+  email: {
+    config: {
+      // Chưa cấu hình SMTP thật thì dùng "sendmail" mặc định của Strapi (sẽ lỗi êm,
+      // không chặn request) — set các biến SMTP_* trong .env để gửi email thật.
+      provider: env('SMTP_HOST') ? 'nodemailer' : 'sendmail',
+      providerOptions: env('SMTP_HOST')
+        ? {
+            host: env('SMTP_HOST'),
+            port: env.int('SMTP_PORT', 587),
+            auth: {
+              user: env('SMTP_USERNAME'),
+              pass: env('SMTP_PASSWORD'),
+            },
+          }
+        : undefined,
+      settings: {
+        defaultFrom: env('EMAIL_FROM', 'no-reply@cemr.local'),
+        defaultReplyTo: env('EMAIL_FROM', 'no-reply@cemr.local'),
+      },
+    },
+  },
 });
 
 export default config;
