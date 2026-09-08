@@ -1,0 +1,7 @@
+{$SITE_DOMAIN} {
+	reverse_proxy web:3000
+}
+
+{$CMS_DOMAIN} {
+	reverse_proxy cms:1337
+}
