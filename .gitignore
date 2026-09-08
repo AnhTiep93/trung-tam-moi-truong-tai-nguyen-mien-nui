@@ -1,11 +1,2 @@
-node_modules/
-.next/
-.env
-.env.*
-!.env.example
-!.env.production.example
-*.log
 .DS_Store
-cms/.tmp/
-cms/build/
-cms/.strapi/
+*.log
