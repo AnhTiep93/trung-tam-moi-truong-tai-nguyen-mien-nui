@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "training_courses",
+  "info": {
+    "singularName": "training-course",
+    "pluralName": "training-courses",
+    "displayName": "Training Course",
+    "description": "Khóa đào tạo (GIS, viễn thám, LiDAR, UAV, môi trường...)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "summary": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "registrationOpen": {
+      "type": "boolean",
+      "default": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": { "i18n": { "localized": false } }
+    }
+  }
+}

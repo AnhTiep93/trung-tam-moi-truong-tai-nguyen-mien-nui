@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "consultation_requests",
+  "info": {
+    "singularName": "consultation-request",
+    "pluralName": "consultation-requests",
+    "displayName": "Consultation Request",
+    "description": "Yêu cầu tư vấn / liên hệ gửi từ website"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "serviceInterest": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["moi", "da-lien-he", "hoan-thanh"],
+      "default": "moi"
+    }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "Đề tài / dự án nghiên cứu"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "nha-nuoc",
+        "bo",
+        "tinh",
+        "dai-hoc",
+        "quoc-te",
+        "doanh-nghiep"
+      ],
+      "required": true,
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "field": {
+      "type": "enumeration",
+      "enum": [
+        "tai-nguyen-rung",
+        "tai-nguyen-dat",
+        "moi-truong",
+        "gis-vien-tham",
+        "quy-hoach",
+        "nong-nghiep-tai-nguyen",
+        "bien-doi-khi-hau",
+        "chuyen-doi-so"
+      ],
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "leadResearcher": {
+      "type": "string"
+    },
+    "hostInstitution": {
+      "type": "string"
+    },
+    "partnerInstitutions": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "endDate": {
+      "type": "date",
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "budget": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "richtext"
+    },
+    "result": {
+      "type": "richtext"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images", "files"],
+      "pluginOptions": { "i18n": { "localized": false } }
+    },
+    "members": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "projects"
+    }
+  }
+}
