@@ -430,6 +430,117 @@ async function seedGisLayers(app: Core.Strapi) {
           ],
         },
       },
+      {
+        name: 'Sông suối (minh hoạ)',
+        category: 'song-suoi',
+        description:
+          'Đường sông suối minh hoạ — hình học giả lập, sẽ thay bằng dữ liệu thủy văn thực tế.',
+        color: '#1d6fa5',
+        fillOpacity: 0,
+        defaultVisible: true,
+        order: 4,
+        geojson: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              properties: { name: 'Sông minh hoạ' },
+              geometry: {
+                type: 'LineString',
+                coordinates: [
+                  [105.7, 21.55],
+                  [105.8, 21.58],
+                  [105.88, 21.62],
+                  [105.95, 21.65],
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        name: 'Giao thông (minh hoạ)',
+        category: 'giao-thong',
+        description:
+          'Tuyến đường giao thông minh hoạ — hình học giả lập, sẽ thay bằng dữ liệu giao thông thực tế.',
+        color: '#4b564e',
+        fillOpacity: 0,
+        defaultVisible: false,
+        order: 5,
+        geojson: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              properties: { name: 'Tuyến đường minh hoạ' },
+              geometry: {
+                type: 'LineString',
+                coordinates: [
+                  [105.72, 21.52],
+                  [105.8, 21.6],
+                  [105.9, 21.68],
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        name: 'Quy hoạch sử dụng đất (minh hoạ)',
+        category: 'quy-hoach',
+        description:
+          'Vùng quy hoạch minh hoạ — hình học giả lập, sẽ thay bằng dữ liệu quy hoạch thực tế được phê duyệt.',
+        color: '#8a5cb8',
+        fillOpacity: 0.3,
+        defaultVisible: false,
+        order: 6,
+        geojson: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              properties: { name: 'Vùng quy hoạch minh hoạ' },
+              geometry: {
+                type: 'Polygon',
+                coordinates: [
+                  [
+                    [105.78, 21.62],
+                    [105.86, 21.62],
+                    [105.86, 21.68],
+                    [105.78, 21.68],
+                    [105.78, 21.62],
+                  ],
+                ],
+              },
+            },
+          ],
+        },
+      },
+      {
+        name: 'Điểm thiên tai (minh hoạ)',
+        category: 'thien-tai',
+        description:
+          'Điểm nguy cơ thiên tai minh hoạ — hình học giả lập, sẽ thay bằng dữ liệu cảnh báo thiên tai thực tế.',
+        color: '#c0392b',
+        fillOpacity: 0.6,
+        defaultVisible: false,
+        order: 7,
+        geojson: {
+          type: 'FeatureCollection',
+          features: [
+            {
+              type: 'Feature',
+              properties: { name: 'Điểm sạt lở minh hoạ 1' },
+              geometry: { type: 'Point', coordinates: [105.76, 21.63] },
+            },
+            {
+              type: 'Feature',
+              properties: { name: 'Điểm sạt lở minh hoạ 2' },
+              geometry: { type: 'Point', coordinates: [105.9, 21.56] },
+            },
+          ],
+        },
+      },
     ],
     'name'
   );
