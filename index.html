@@ -1,168 +1,295 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trung tâm Môi trường Tài nguyên miền núi</title>
-<meta name="description" content="Khoa học – Công nghệ – Tài nguyên – Môi trường vì phát triển bền vững miền núi." />
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trung tâm Môi trường Tài nguyên miền núi — Đại học Nông Lâm Thái Nguyên</title>
+  <meta name="description" content="Khoa học – Công nghệ – Tài nguyên – Môi trường vì phát triển bền vững miền núi. Nghiên cứu, tư vấn và chuyển giao công nghệ về tài nguyên đất, rừng, môi trường, GIS – viễn thám và quy hoạch." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
+  <div data-include="partials/header.html"></div>
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="logo">
-      <span class="logo-badge">CEMR</span>
-      <span class="logo-text">Trung tâm Môi trường Tài nguyên miền núi</span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="site-nav" id="siteNav">
-      <a href="#about">Giới thiệu</a>
-      <a href="#fields">Lĩnh vực</a>
-      <a href="#services">Dịch vụ</a>
-      <a href="#contact">Liên hệ</a>
-    </nav>
-  </div>
-</header>
+  <main id="main">
 
-<main id="top">
-
-  <section class="hero">
-    <div class="container hero-inner">
-      <p class="eyebrow">Trường Đại học Nông Lâm – Đại học Thái Nguyên</p>
-      <h1>Trung tâm Môi trường Tài nguyên miền núi</h1>
-      <p class="slogan">Khoa học – Công nghệ – Tài nguyên – Môi trường vì phát triển bền vững miền núi</p>
-      <a href="#fields" class="btn btn-accent">Xem lĩnh vực hoạt động</a>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="container">
-      <p class="section-eyebrow">Giới thiệu</p>
-      <h2>Về Trung tâm</h2>
-      <p class="section-lead">
-        Trung tâm Môi trường Tài nguyên miền núi là đơn vị nghiên cứu, chuyển giao công nghệ và tư vấn
-        trong các lĩnh vực tài nguyên đất, tài nguyên rừng, môi trường, GIS – viễn thám và quy hoạch
-        phát triển miền núi, trực thuộc Trường Đại học Nông Lâm, Đại học Thái Nguyên.
-      </p>
-      <p class="note">Nội dung minh hoạ – sẽ được thay bằng nội dung chính thức của Trung tâm.</p>
-    </div>
-  </section>
-
-  <section id="fields" class="section section-alt">
-    <div class="container">
-      <p class="section-eyebrow">8 nhóm lĩnh vực</p>
-      <h2>Lĩnh vực hoạt động</h2>
-      <div class="grid grid-4">
-        <div class="card">
-          <span class="card-icon">🌳</span>
-          <h3>Tài nguyên rừng</h3>
-          <p>Điều tra, theo dõi diễn biến rừng, GIS viễn thám, carbon rừng, đa dạng sinh học.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">🌱</span>
-          <h3>Tài nguyên đất</h3>
-          <p>Điều tra, đánh giá đất đai, quy hoạch và kiểm kê sử dụng đất.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">🌎</span>
-          <h3>Môi trường</h3>
-          <p>Quan trắc, đánh giá tác động, quản lý chất thải, phục hồi môi trường.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">🗺️</span>
-          <h3>GIS – Viễn thám</h3>
-          <p>GIS, viễn thám, UAV/Drone, LiDAR, WebGIS, phân tích không gian.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">🏘️</span>
-          <h3>Quy hoạch phát triển miền núi</h3>
-          <p>Quy hoạch xây dựng, sử dụng đất, nông thôn và phát triển kinh tế – xã hội.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">🌾</span>
-          <h3>Nông nghiệp và tài nguyên</h3>
-          <p>Nông nghiệp công nghệ cao, chính xác, phát triển chuỗi giá trị nông sản.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">☁️</span>
-          <h3>Biến đổi khí hậu</h3>
-          <p>Giám sát, đánh giá rủi ro thiên tai, thích ứng biến đổi khí hậu, carbon.</p>
-        </div>
-        <div class="card">
-          <span class="card-icon">💻</span>
-          <h3>Chuyển đổi số TN-MT</h3>
-          <p>Cơ sở dữ liệu tài nguyên, WebGIS Dashboard, AI và Big Data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="section">
-    <div class="container">
-      <p class="section-eyebrow">Tư vấn – chuyển giao</p>
-      <h2>Dịch vụ cung cấp</h2>
-      <div class="grid grid-3">
-        <div class="card card-simple">
-          <h3>Tài nguyên đất</h3>
-          <p>Điều tra, đánh giá đất đai, quy hoạch và kiểm kê sử dụng đất.</p>
-        </div>
-        <div class="card card-simple">
-          <h3>GIS – WebGIS</h3>
-          <p>Xây dựng bản đồ, cơ sở dữ liệu GIS, WebGIS và phân tích không gian.</p>
-        </div>
-        <div class="card card-simple">
-          <h3>Đo đạc – bản đồ</h3>
-          <p>Khảo sát địa hình bằng UAV, LiDAR, GNSS RTK, máy toàn đạc.</p>
-        </div>
-        <div class="card card-simple">
-          <h3>Môi trường</h3>
-          <p>Quan trắc, đánh giá tác động và quản lý môi trường.</p>
-        </div>
-        <div class="card card-simple">
-          <h3>Quy hoạch</h3>
-          <p>Quy hoạch xây dựng xã, nông thôn, sử dụng đất, phát triển KT-XH.</p>
-        </div>
-        <div class="card card-simple">
-          <h3>Carbon</h3>
-          <p>Kiểm kê phát thải, tính toán và giám sát tín chỉ carbon.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section section-dark">
-    <div class="container">
-      <p class="section-eyebrow section-eyebrow-light">Liên hệ</p>
-      <h2>Bạn cần tư vấn về tài nguyên – môi trường – GIS?</h2>
-      <p class="section-lead section-lead-light">Hãy liên hệ với chúng tôi, đội ngũ chuyên môn của Trung tâm sẽ phản hồi sớm nhất.</p>
-
-      <div class="contact-grid">
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
         <div>
-          <p><strong>Đơn vị:</strong> Trường Đại học Nông Lâm, Đại học Thái Nguyên</p>
-          <p><strong>Địa chỉ:</strong> (thông tin minh hoạ)</p>
-          <p><strong>Điện thoại:</strong> (demo) 0208 xxx xxxx</p>
-          <p><strong>Email:</strong> (demo) cemr@tuaf.edu.vn</p>
+          <span class="eyebrow">Trường Đại học Nông Lâm – Đại học Thái Nguyên</span>
+          <h1 class="hero__title">Giải pháp <em>khoa học</em> cho tài nguyên &amp; môi trường miền núi</h1>
+          <p class="lead">Khoa học – Công nghệ – Tài nguyên – Môi trường vì phát triển bền vững miền núi. Trung tâm nghiên cứu, tư vấn và chuyển giao công nghệ trong lĩnh vực tài nguyên đất, rừng, môi trường, GIS – viễn thám và quy hoạch.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="dich-vu.html">Xem dịch vụ</a>
+            <a class="btn btn--ghost" href="gioi-thieu.html">Về Trung tâm</a>
+          </div>
+          <div class="info-list">
+            <!-- DEMO: cần thông tin chính thức -->
+            <p class="info-item">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span><strong>Giờ làm việc</strong>Thứ 2 – Thứ 6, 08:00 – 17:00</span>
+            </p>
+            <p class="info-item">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+              <span><strong>Địa chỉ</strong>ĐH Nông Lâm, xã Quyết Thắng, TP. Thái Nguyên</span>
+            </p>
+          </div>
         </div>
-        <a class="btn btn-accent" href="mailto:cemr@tuaf.edu.vn?subject=Y%C3%AAu%20c%E1%BA%A7u%20t%C6%B0%20v%E1%BA%A5n">
-          Gửi email cho chúng tôi
-        </a>
+        <div>
+          <div class="media-placeholder media-placeholder--wide">Ảnh: khảo sát thực địa / bản đồ chuyên đề</div>
+        </div>
       </div>
-    </div>
-  </section>
 
-</main>
+      <div class="container">
+        <!-- DEMO: số liệu minh hoạ, cần dữ liệu thật -->
+        <div class="stat-row">
+          <div class="stat"><div class="stat__value">2008</div><p class="stat__label">Năm thành lập Trung tâm</p></div>
+          <div class="stat"><div class="stat__value">80+</div><p class="stat__label">Đề tài, dự án đã thực hiện</p></div>
+          <div class="stat"><div class="stat__value">15</div><p class="stat__label">Tỉnh miền núi phía Bắc đã triển khai</p></div>
+          <div class="stat"><div class="stat__value">8</div><p class="stat__label">Nhóm lĩnh vực chuyên môn</p></div>
+        </div>
+      </div>
+    </section>
 
-<footer class="site-footer">
-  <div class="container">
-    <p><strong>Trung tâm Môi trường Tài nguyên miền núi</strong></p>
-    <p>Trường Đại học Nông Lâm, Đại học Thái Nguyên</p>
-    <p class="footer-note">© <span id="year"></span> CEMR. Bảo lưu mọi quyền.</p>
-  </div>
-</footer>
+    <!-- ============ Giới thiệu ngắn ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Về chúng tôi</span>
+          <h2>Đơn vị nghiên cứu và tư vấn về <em>tài nguyên – môi trường</em> gắn với đặc thù miền núi</h2>
+          <p class="lead">Trung tâm Môi trường Tài nguyên miền núi trực thuộc Trường Đại học Nông Lâm – Đại học Thái Nguyên, hoạt động trong các mảng: nghiên cứu khoa học, chuyển giao công nghệ, đào tạo – tập huấn, tư vấn, điều tra và đánh giá tài nguyên, ứng dụng GIS và viễn thám, quy hoạch sử dụng đất và phát triển kinh tế – xã hội miền núi.</p>
+        </div>
+        <a class="btn btn--ghost" href="gioi-thieu.html">Tìm hiểu thêm về Trung tâm</a>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- ============ Dịch vụ ============ -->
+    <section class="section" id="dich-vu">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Dịch vụ</span>
+          <h2>Tư vấn &amp; chuyển giao công nghệ</h2>
+          <p class="lead">Trung tâm cung cấp dịch vụ chuyên môn cho các tỉnh, huyện/xã, sở ngành, doanh nghiệp và đối tác nghiên cứu.</p>
+        </div>
+
+        <div class="leader-list">
+          <div class="leader-list__row">
+            <span class="leader-list__name">Tư vấn tài nguyên đất</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Điều tra, đánh giá, kiểm kê và quy hoạch sử dụng đất</span>
+          </div>
+          <div class="leader-list__row">
+            <span class="leader-list__name">Tư vấn môi trường</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Đánh giá tác động, quan trắc và quản lý môi trường</span>
+          </div>
+          <div class="leader-list__row">
+            <span class="leader-list__name">GIS – Đo đạc – Bản đồ</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Xây dựng CSDL không gian, WebGIS, bản đồ số, phân tích không gian</span>
+          </div>
+          <div class="leader-list__row">
+            <span class="leader-list__name">UAV – LiDAR</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Bay chụp, khảo sát địa hình, mô hình số độ cao</span>
+          </div>
+          <div class="leader-list__row">
+            <span class="leader-list__name">Quy hoạch</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Quy hoạch xây dựng xã, nông thôn, sử dụng đất và phát triển KT–XH</span>
+          </div>
+          <div class="leader-list__row">
+            <span class="leader-list__name">Carbon</span>
+            <span class="leader-list__dots" aria-hidden="true"></span>
+            <span class="leader-list__desc">Kiểm kê phát thải, tính toán và giám sát carbon rừng, tín chỉ carbon</span>
+          </div>
+        </div>
+
+        <div class="section-foot">
+          <a class="btn btn--primary" href="lien-he.html">Yêu cầu tư vấn</a>
+          <a class="btn btn--ghost" href="dich-vu.html">Xem chi tiết dịch vụ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Lĩnh vực hoạt động ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Lĩnh vực</span>
+          <h2>Tám nhóm lĩnh vực chuyên môn</h2>
+          <p class="lead">Từ điều tra tài nguyên tới chuyển đổi số — bao phủ chuỗi công việc về tài nguyên và môi trường miền núi.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3c3 3 4 6 4 9a4 4 0 11-8 0c0-3 1-6 4-9z" stroke="currentColor"/><path d="M12 21v-6" stroke="currentColor" stroke-linecap="round"/></svg>
+            <h3 class="card__title">Tài nguyên rừng</h3>
+            <p>Điều tra, theo dõi diễn biến rừng, carbon rừng, REDD+, đa dạng sinh học.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18h16M6 18c0-4 3-7 6-7s6 3 6 7" stroke="currentColor" stroke-linecap="round"/><path d="M12 11V4" stroke="currentColor" stroke-linecap="round"/></svg>
+            <h3 class="card__title">Tài nguyên đất</h3>
+            <p>Điều tra, đánh giá, thống kê – kiểm kê, quy hoạch và CSDL đất đai.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="currentColor"/></svg>
+            <h3 class="card__title">Môi trường</h3>
+            <p>Quan trắc, đánh giá tác động, quản lý chất thải, phục hồi môi trường.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 3L4 5v16l5-2 6 2 5-2V3l-5 2-6-2z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 3v16M15 5v16" stroke="currentColor"/></svg>
+            <h3 class="card__title">GIS – Viễn thám</h3>
+            <p>WebGIS, UAV/LiDAR, CSDL không gian, bản đồ số, phân tích không gian, AI trong GIS.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 20V8l5-4 6 3 5-2v12M4 20h16M9 4v13M15 7v13" stroke="currentColor" stroke-linejoin="round"/></svg>
+            <h3 class="card__title">Quy hoạch &amp; phát triển miền núi</h3>
+            <p>Quy hoạch xây dựng, nông thôn, sử dụng đất và phát triển kinh tế – xã hội.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21c5-2 8-6 8-11V5l-8-2-8 2v5c0 5 3 9 8 11z" stroke="currentColor" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3 class="card__title">Nông nghiệp &amp; tài nguyên</h3>
+            <p>Nông nghiệp công nghệ cao, nông nghiệp chính xác, chuỗi giá trị nông sản.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 15a4 4 0 014-4 5 5 0 019.6-1.5A3.5 3.5 0 1118 15H4z" stroke="currentColor" stroke-linejoin="round"/></svg>
+            <h3 class="card__title">Biến đổi khí hậu</h3>
+            <p>Giám sát, đánh giá rủi ro thiên tai, thích ứng và giảm phát thải.</p>
+          </article>
+          <article class="card">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="1.5" stroke="currentColor"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-linecap="round"/></svg>
+            <h3 class="card__title">Chuyển đổi số TN–MT</h3>
+            <p>CSDL tài nguyên, dashboard, bản đồ trực tuyến, AI &amp; Big Data, hỗ trợ ra quyết định.</p>
+          </article>
+        </div>
+
+        <div class="section-foot">
+          <a class="btn btn--ghost" href="linh-vuc.html">Xem tất cả lĩnh vực</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Đề tài – dự án tiêu biểu ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nghiên cứu</span>
+          <h2>Đề tài &amp; dự án tiêu biểu</h2>
+        </div>
+
+        <!-- DEMO: nội dung minh hoạ, cần danh mục dự án thật -->
+        <div class="grid grid--3">
+          <a class="card card--link" href="nghien-cuu.html">
+            <span class="card__meta">Cấp tỉnh</span>
+            <h3 class="card__title">Xây dựng CSDL đất đai phục vụ quản lý cấp huyện</h3>
+            <p>Chuẩn hoá dữ liệu, xây dựng WebGIS tra cứu hiện trạng và quy hoạch sử dụng đất.</p>
+          </a>
+          <a class="card card--link" href="nghien-cuu.html">
+            <span class="card__meta">Cấp Bộ</span>
+            <h3 class="card__title">Giám sát diễn biến rừng bằng ảnh vệ tinh đa thời gian</h3>
+            <p>Phát hiện mất rừng, suy thoái rừng và ước tính trữ lượng carbon.</p>
+          </a>
+          <a class="card card--link" href="nghien-cuu.html">
+            <span class="card__meta">Hợp tác quốc tế</span>
+            <h3 class="card__title">Ứng dụng UAV – LiDAR trong khảo sát địa hình lưu vực</h3>
+            <p>Xây dựng mô hình số độ cao độ phân giải cao phục vụ quy hoạch và phòng chống thiên tai.</p>
+          </a>
+        </div>
+
+        <div class="section-foot">
+          <a class="btn btn--ghost" href="nghien-cuu.html">Tất cả nghiên cứu &amp; sản phẩm khoa học</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WebGIS teaser ============ -->
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">WebGIS</span>
+          <h2>Bản đồ <em>tài nguyên miền núi</em> trực tuyến</h2>
+          <p class="lead">Hệ thống WebGIS cho phép bật/tắt các lớp: ranh giới hành chính, địa hình, đất, rừng, sông suối, giao thông, hiện trạng sử dụng đất, quy hoạch, môi trường, khí hậu và thiên tai.</p>
+          <div class="section-foot">
+            <a class="btn btn--primary" href="webgis.html">Khám phá WebGIS</a>
+          </div>
+        </div>
+        <div class="media-placeholder media-placeholder--wide">Bản đồ WebGIS (sẽ nhúng sau)</div>
+      </div>
+    </section>
+
+    <!-- ============ Đối tác ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Hợp tác</span>
+          <h2>Đối tác tiêu biểu</h2>
+        </div>
+        <!-- DEMO: danh sách minh hoạ, cần logo và tên đối tác thật -->
+        <ul class="partner-logos">
+          <li>Sở TN&amp;MT các tỉnh</li>
+          <li>UBND huyện / xã</li>
+          <li>Viện nghiên cứu</li>
+          <li>Trường đại học trong nước</li>
+          <li>Đối tác Nhật Bản</li>
+          <li>Đối tác Hàn Quốc</li>
+          <li>Đối tác Đài Loan</li>
+          <li>Doanh nghiệp công nghệ</li>
+        </ul>
+        <div class="section-foot">
+          <a class="btn btn--ghost" href="hop-tac.html">Xem mạng lưới hợp tác</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Tin tức mới nhất ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Tin tức – Sự kiện</span>
+          <h2>Hoạt động mới nhất</h2>
+        </div>
+        <!-- DEMO: tin minh hoạ -->
+        <div class="grid grid--3">
+          <article class="card card--link">
+            <p class="news-item__date">15/08/2026</p>
+            <h3 class="card__title">Tập huấn ứng dụng GIS cho cán bộ địa phương</h3>
+            <p>Khoá tập huấn ba ngày về thu thập, biên tập và phân tích dữ liệu không gian.</p>
+          </article>
+          <article class="card card--link">
+            <p class="news-item__date">02/07/2026</p>
+            <h3 class="card__title">Khảo sát thực địa đánh giá thoái hoá đất</h3>
+            <p>Đợt khảo sát tại các xã vùng cao phục vụ đề tài đánh giá chất lượng đất.</p>
+          </article>
+          <article class="card card--link">
+            <p class="news-item__date">20/06/2026</p>
+            <h3 class="card__title">Hội thảo hợp tác nghiên cứu carbon rừng</h3>
+            <p>Trao đổi với đối tác quốc tế về phương pháp kiểm kê và giám sát carbon.</p>
+          </article>
+        </div>
+        <div class="section-foot">
+          <a class="btn btn--ghost" href="tin-tuc.html">Tất cả tin tức</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA liên hệ ============ -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Bạn cần tư vấn về tài nguyên – môi trường – GIS?</h2>
+          <p>Gửi yêu cầu cho chúng tôi, đội ngũ chuyên môn của Trung tâm sẽ liên hệ lại.</p>
+          <a class="btn btn--light" href="lien-he.html">Gửi yêu cầu</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="partials/footer.html"></div>
 </body>
 </html>

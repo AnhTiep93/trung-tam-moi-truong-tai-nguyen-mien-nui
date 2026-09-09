@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liên hệ — Trung tâm Môi trường Tài nguyên miền núi</title>
+  <meta name="description" content="Địa chỉ, điện thoại, email và biểu mẫu liên hệ của Trung tâm Môi trường Tài nguyên miền núi. Bạn cần tư vấn về tài nguyên – môi trường – GIS? Hãy gửi yêu cầu cho chúng tôi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <div data-include="partials/header.html"></div>
+
+  <main id="main">
+    <nav class="breadcrumb container" aria-label="Đường dẫn">
+      <ol>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li aria-current="page">Liên hệ</li>
+      </ol>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <span class="eyebrow">Liên hệ</span>
+        <h1>Liên hệ</h1>
+        <p class="lead">Bạn cần tư vấn về tài nguyên – môi trường – GIS? Hãy gửi yêu cầu cho chúng tôi, đội ngũ chuyên môn của Trung tâm sẽ liên hệ lại.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Thông tin liên hệ</h2>
+          <!-- DEMO: cần thông tin chính thức từ Trung tâm -->
+          <ul class="contact-list">
+            <li><strong>Trung tâm Môi trường Tài nguyên miền núi</strong><br />Trường Đại học Nông Lâm – Đại học Thái Nguyên</li>
+            <li>Địa chỉ: xã Quyết Thắng, TP. Thái Nguyên, tỉnh Thái Nguyên</li>
+            <li>Điện thoại: <a href="tel:+842803855564">(0208) 3 855 564</a></li>
+            <li>Email: <a href="mailto:trungtam@example.edu.vn">trungtam@example.edu.vn</a></li>
+            <li>Fanpage · Zalo: đang cập nhật</li>
+          </ul>
+        </div>
+        <div class="media-placeholder media-placeholder--wide">Bản đồ Google Maps (sẽ nhúng sau)</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Gửi yêu cầu</span>
+          <h2>Biểu mẫu liên hệ</h2>
+          <p class="lead">Điền thông tin dưới đây và gửi. Yêu cầu sẽ được chuyển tới hộp thư của Trung tâm.</p>
+        </div>
+
+        <!--
+          Form xử lý qua Formspree (miễn phí, không cần backend).
+          CÁCH KÍCH HOẠT:
+            1. Tạo tài khoản tại https://formspree.io (dùng email chính thức của Trung tâm).
+            2. Tạo một "form" mới, Formspree cấp một endpoint dạng https://formspree.io/f/abcдwxyz
+            3. Thay YOUR_FORM_ID ở thuộc tính action bên dưới bằng mã đó.
+          Khi chưa thay mã, nút gửi sẽ báo lỗi — đó là hành vi mong đợi cho tới khi có tài khoản.
+        -->
+        <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form__field">
+            <label for="lh-ten">Họ và tên</label>
+            <input type="text" id="lh-ten" name="name" required />
+          </div>
+          <div class="form__field">
+            <label for="lh-donvi">Đơn vị / tổ chức</label>
+            <input type="text" id="lh-donvi" name="organization" />
+          </div>
+          <div class="form__field">
+            <label for="lh-email">Email</label>
+            <input type="email" id="lh-email" name="email" required />
+          </div>
+          <div class="form__field">
+            <label for="lh-dienthoai">Điện thoại</label>
+            <input type="tel" id="lh-dienthoai" name="phone" />
+          </div>
+          <div class="form__field">
+            <label for="lh-noidung">Nội dung cần tư vấn</label>
+            <textarea id="lh-noidung" name="message" rows="5" required></textarea>
+          </div>
+          <input type="hidden" name="_subject" value="Yêu cầu tư vấn từ website Trung tâm" />
+          <!-- honeypot chống spam: người dùng thật để trống -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" hidden />
+          <div>
+            <button class="btn btn--primary" type="submit">Gửi yêu cầu</button>
+          </div>
+        </form>
+
+        <p class="stub-note">Biểu mẫu dùng dịch vụ Formspree. Cần thay mã <code>YOUR_FORM_ID</code> trong file <code>lien-he.html</code> bằng endpoint thật sau khi tạo tài khoản Formspree bằng email của Trung tâm.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS — Trung tâm Môi trường Tài nguyên miền núi</title>
+  <meta name="description" content="Năng lực WebGIS của Trung tâm và định hướng hệ thống Bản đồ tài nguyên miền núi trực tuyến cho phép bật/tắt các lớp: hành chính, địa hình, đất, rừng, thuỷ văn, giao thông, hiện trạng, quy hoạch, môi trường, khí hậu và thiên tai." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+  <div data-include="partials/header.html"></div>
+
+  <main id="main">
+    <nav class="breadcrumb container" aria-label="Đường dẫn">
+      <ol>
+        <li><a href="index.html">Trang chủ</a></li>
+        <li aria-current="page">WebGIS</li>
+      </ol>
+    </nav>
+
+    <header class="page-header">
+      <div class="container">
+        <span class="eyebrow">WebGIS</span>
+        <h1>WebGIS <em>tài nguyên miền núi</em></h1>
+        <p class="lead">Định hướng xây dựng hệ thống bản đồ trực tuyến "Bản đồ tài nguyên – môi trường miền núi" — sản phẩm đặc trưng của Trung tâm, phục vụ tra cứu và hỗ trợ ra quyết định cho địa phương.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="media-placeholder media-placeholder--wide">Bản đồ WebGIS sẽ được nhúng tại đây</div>
+        <p class="stub-note">Bản đồ sẽ dùng <strong>Leaflet</strong> (nạp qua CDN). Còn chờ nguồn dữ liệu các lớp trước khi nhúng. <!-- xem CLAUDE.md mục 9 --></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Các lớp bản đồ</span>
+          <h2>Người dùng có thể bật/tắt</h2>
+        </div>
+        <ul class="layer-list">
+          <li>Ranh giới hành chính</li>
+          <li>Địa hình</li>
+          <li>Đất</li>
+          <li>Rừng</li>
+          <li>Sông suối</li>
+          <li>Giao thông</li>
+          <li>Hiện trạng sử dụng đất</li>
+          <li>Quy hoạch</li>
+          <li>Môi trường</li>
+          <li>Khí hậu</li>
+          <li>Thiên tai</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Năng lực</span>
+          <h2>Trung tâm làm được gì với <em>WebGIS</em></h2>
+          <ul class="check-list">
+            <li>Xây dựng cơ sở dữ liệu không gian chuẩn hoá theo chuyên đề</li>
+            <li>Thiết kế và triển khai WebGIS tra cứu, cập nhật trực tuyến</li>
+            <li>Tích hợp ảnh vệ tinh, dữ liệu UAV/LiDAR và dữ liệu thực địa</li>
+            <li>Dashboard giám sát và báo cáo tự động</li>
+          </ul>
+        </div>
+        <div class="media-placeholder media-placeholder--wide">Sơ đồ kiến trúc hệ thống WebGIS</div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta-band">
+          <h2>Cần một hệ thống WebGIS cho đơn vị của bạn?</h2>
+          <p>Trung tâm tư vấn từ khâu chuẩn hoá dữ liệu tới vận hành và đào tạo sử dụng.</p>
+          <a class="btn btn--light" href="lien-he.html">Trao đổi với chúng tôi</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+</body>
+</html>

@@ -1,2 +1,16 @@
+# OS
 .DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Nhật ký / tạm
 *.log
+node_modules/
+
+# Lưu ý: giữ lại "anh tham khao.png" và "New Tài liệu DOCX.docx" trong repo
+# làm tài liệu tham khảo (nêu trong CLAUDE.md). Không ignore.

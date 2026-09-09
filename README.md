@@ -1,36 +1,48 @@
 # Website Trung tâm Môi trường Tài nguyên miền núi
 
-Website tĩnh đơn giản — thuần HTML/CSS/JS, không cần cài đặt hay build gì cả.
+Trường Đại học Nông Lâm – Đại học Thái Nguyên.
 
-Xem định hướng nội dung gốc tại [CLAUDE.md](./CLAUDE.md).
+Website tĩnh nhiều trang: HTML + CSS + JavaScript thuần, không framework, không build tool.
+Định hướng dự án xem trong [CLAUDE.md](CLAUDE.md).
 
 ## Cấu trúc
 
-- `index.html` — toàn bộ nội dung trang (một trang, cuộn xuống các mục)
-- `styles.css` — giao diện
-- `script.js` — menu mobile + năm hiện tại ở footer
-
-## Cách xem
-
-Mở trực tiếp file `index.html` bằng trình duyệt (double-click), hoặc chạy 1 static server nếu muốn có URL local:
-
-```bash
-npx http-server -p 8080
+```
+index.html                 Trang chủ
+gioi-thieu / linh-vuc / dich-vu / nghien-cuu / doi-ngu /
+dao-tao / tin-tuc / hop-tac / thu-vien / webgis / lien-he .html   (đã có bố cục + nội dung DEMO)
+partials/header.html       Header dùng chung (nạp bằng JS)
+partials/footer.html       Footer dùng chung (nạp bằng JS)
+assets/css/styles.css      Toàn bộ giao diện
+assets/js/main.js          Nạp partial + menu + tiện ích
+assets/img/                Ảnh nội dung
 ```
 
-rồi vào `http://localhost:8080`.
+## Chạy ở máy local
 
-## Cách chỉnh sửa nội dung
+Header/footer được nạp bằng `fetch()` nên **phải chạy qua HTTP server**, không mở trực tiếp bằng `file://`.
 
-Không có CMS hay database — sửa trực tiếp trong `index.html` bằng trình soạn thảo văn bản bất kỳ (VS Code, Notepad...). Mỗi mục nội dung nằm trong 1 thẻ `<section>` riêng, có `id` rõ ràng (`about`, `fields`, `services`, `contact`) để dễ tìm.
+```bash
+# tại thư mục gốc dự án
+python -m http.server 5173
+```
 
-## Cách đưa lên mạng (hosting)
+Mở http://localhost:5173/ — hoặc dùng extension **Live Server** của VS Code.
 
-Vì là file tĩnh nên có thể host ở bất kỳ đâu, miễn phí:
-- **GitHub Pages** — đẩy repo lên GitHub, bật Pages trong Settings.
-- **Netlify / Vercel** — kéo-thả cả thư mục vào trang deploy của họ.
-- **Hosting/cPanel bất kỳ** — upload 3 file lên thư mục `public_html` hoặc `www`.
+## Triển khai
 
-## Trạng thái hiện tại
+**Đã chốt: GitHub Pages.** Bật Pages cho nhánh, thư mục gốc `/`. File `.nojekyll` ở gốc để tắt xử lý Jekyll. Deploy = push, không cần lệnh build.
 
-Nội dung đang là **dữ liệu minh hoạ** (đánh dấu "demo" ở phần liên hệ) — cần thay bằng thông tin chính thức của Trung tâm trước khi công bố. Trước đó dự án từng thử hướng đi phức tạp hơn (Next.js + Strapi CMS + WebGIS); toàn bộ vẫn còn trong lịch sử git nếu sau này muốn quay lại.
+Các lựa chọn khác vẫn dùng được: Netlify / Cloudflare Pages (kéo thả hoặc kết nối repo), hoặc hosting của trường (FTP).
+
+## Biểu mẫu liên hệ
+
+`lien-he.html` dùng **Formspree** (miễn phí, không backend). Cần:
+
+1. Tạo tài khoản tại https://formspree.io bằng email chính thức của Trung tâm.
+2. Tạo một form, lấy endpoint dạng `https://formspree.io/f/xxxxxxxx`.
+3. Thay `YOUR_FORM_ID` trong `lien-he.html` bằng mã đó.
+
+## Ghi chú nội dung
+
+Thông tin liên hệ, số liệu, tên đề tài/dự án hiện tại là **dữ liệu minh hoạ (DEMO)**, đánh dấu bằng comment `<!-- DEMO -->` trong HTML. Cần thay bằng thông tin chính thức của Trung tâm trước khi công bố.
