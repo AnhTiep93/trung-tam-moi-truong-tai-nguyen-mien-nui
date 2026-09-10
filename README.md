@@ -5,6 +5,10 @@ Trường Đại học Nông Lâm – Đại học Thái Nguyên.
 Website tĩnh nhiều trang: HTML + CSS + JavaScript thuần, không framework, không build tool.
 Định hướng dự án xem trong [CLAUDE.md](CLAUDE.md).
 
+- **Repo:** https://github.com/AnhTiep93/trung-tam-moi-truong-tai-nguyen-mien-nui
+- **Trang chạy (GitHub Pages):** https://anhtiep93.github.io/trung-tam-moi-truong-tai-nguyen-mien-nui/
+- Mỗi lần `git push` lên nhánh `master` là Pages tự build lại (khoảng 1–2 phút).
+
 ## Cấu trúc
 
 ```
