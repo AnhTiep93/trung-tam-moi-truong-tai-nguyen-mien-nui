@@ -78,15 +78,18 @@ Slogan chính:
 ├── assets/
 │   ├── css/styles.css
 │   ├── js/main.js
-│   └── img/                   # ảnh nội dung, đặt tên kebab-case
-├── anh tham khao.png          # tài liệu tham khảo, không deploy
-├── New Tài liệu DOCX.docx     # tài liệu tham khảo, không deploy
+│   └── img/
+│       └── du-an/              # ảnh dự án THẬT, đã resize/nén, 1 thư mục con/dự án (xem mục 8)
+├── Ảnh/                        # ảnh gốc dự án (camera, chưa nén) — tài liệu lưu trữ, không deploy
+├── anh tham khao.png           # tài liệu tham khảo, không deploy
+├── New Tài liệu DOCX.docx      # tài liệu tham khảo, không deploy
 ├── CLAUDE.md
 └── README.md
 ```
 
 - Tên file trang: **kebab-case, tiếng Việt không dấu**, phẳng ở gốc (dễ cho GitHub Pages).
 - Mỗi trang là một file HTML hoàn chỉnh, tự chứa `<head>`, dẫn tới `assets/css/styles.css` và `assets/js/main.js`.
+- `assets/img/du-an/<slug-du-an>/01.jpg, 02.jpg, ...`: ảnh dự án thật đã xử lý (resize chiều dài nhất ≤1600px, JPEG quality ~78) từ ảnh gốc trong `Ảnh/`. Dùng class `.field-photo` (ảnh lớn) và `.photo-row` (dải ảnh nhỏ) trong `styles.css`. Thêm dự án mới: bỏ ảnh gốc vào `Ảnh/<tên dự án>/`, resize/nén sang `assets/img/du-an/<slug>/`, rồi thêm khối `.field-block` vào mục Dự án của `nghien-cuu.html` theo mẫu các dự án hiện có.
 
 ### Header/footer dùng chung
 
@@ -201,9 +204,10 @@ Nguyên tắc: **tối giản, nhiều khoảng trắng, một màu điểm nh�
 
 ## 8. Nội dung & dữ liệu
 
-- **Mọi thông tin liên hệ, số liệu, tên đề tài/dự án, tên cán bộ hiện tại đều là DEMO** cho tới khi Trung tâm cung cấp bản chính thức. Đánh dấu rõ vùng demo (comment HTML `<!-- DEMO: cần dữ liệu thật -->`).
-- Không bịa tên người thật, số điện thoại, email, kết quả dự án.
-- Thông tin đơn vị cần lấy chính thức: tên tiếng Anh & viết tắt, địa chỉ, điện thoại, email, website, cơ cấu tổ chức, danh sách nhân sự, danh mục đề tài/dự án, logo đối tác.
+- **Mọi thông tin liên hệ, số liệu, tên đề tài, tên cán bộ hiện tại đều là DEMO** cho tới khi Trung tâm cung cấp bản chính thức. Đánh dấu rõ vùng demo (comment HTML `<!-- DEMO: cần dữ liệu thật -->`).
+- **Ngoại lệ — mục "Dự án" trong `nghien-cuu.html`**: 6 dự án ở đây là **THẬT** (tên dự án, địa bàn, năm lấy từ tên thư mục ảnh gốc do Trung tâm cung cấp trong `Ảnh/`, kèm ảnh thực địa thật). Mô tả chi tiết (chủ nhiệm, kinh phí, kết quả cụ thể) vẫn **chưa có** — không tự bịa, chỉ mô tả khái quát đúng với tên dự án và nội dung thấy được trong ảnh. Khi có thêm dự án thật, làm theo hướng dẫn ở mục 4.
+- Không bịa tên người thật, số điện thoại, email, kết quả dự án. Ảnh dự án có người thật (cán bộ, đối tác, chính quyền địa phương) — không tự đặt tên hay chú thích danh tính trong `alt`/caption, chỉ mô tả hoạt động và địa điểm.
+- Thông tin đơn vị cần lấy chính thức: tên tiếng Anh & viết tắt, địa chỉ, điện thoại, email, website, cơ cấu tổ chức, danh sách nhân sự, danh mục đề tài/công bố khoa học, logo đối tác.
 
 ---
 
